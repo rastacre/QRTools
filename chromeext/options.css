@@ -1,0 +1,56 @@
+.wrapper{
+	width: 600px;
+	margin: 20 auto;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 4px 4px 12px #ccc;
+}
+.wrapper > div{
+	padding-left:20px;
+	padding-right:20px;
+	position: relative;
+}
+.title{
+	text-align: center;
+	font-size: 14px;
+	padding: 10px 20px 0;
+	margin-bottom: 20px;
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+	border-radius: 3px;
+}
+.title h2{
+	margin: 0;
+	padding: 0 0 10px;
+}
+.option_wrapper{}
+.option{
+	margin: 15px auto;
+	border-bottom: 1px solid #bbb;
+	padding-bottom: 15px
+}
+.option label{}
+#status{
+	color: #aaa;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 200px;
+	height: 20px;
+}
+.submit{
+	margin: 20px 0;
+}
+.submit button{
+	padding: 5px 20px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	font-size: 14px;
+	box-shadow: 1px 1px 3px #ccc;
+}
+
+.submit button:active{
+	box-shadow: none;
+}

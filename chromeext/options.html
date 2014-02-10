@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>QR-Tools Options</title>
+		<link href="options.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="title">
+				<h2>QR-Tools Options</h2>
+			</div>
+			
+			<div class="option_wrapper">
+				<div class="option">
+					<label>Open QR as:</label>
+					<select id="showas">
+						<option value="popup">Popup</option>
+						<option value="tab">New Tab</option>
+						<!--<option value="over">Overlay</option>-->
+					</select>
+				</div>
+				
+				<div class="option">
+					<input type="checkbox" id="short"/>
+					<label>Automatically shorten URLs with goo.gl</label>
+				</div>
+			</div>
+			
+			
+			
+			<div class="submit">
+				<button id="save">Save</button>
+				<div id="status">Hello</div>
+			</div>
+		</div>
+		
+		<script src="options.js"></script>
+	</body>
+</html>
