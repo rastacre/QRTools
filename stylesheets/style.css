@@ -1,0 +1,281 @@
+body{
+	font-family: arial;
+	font-size: 10pt;
+	min-height: 80%;
+	padding: 10px 0;
+	/*background: -moz-linear-gradient(top, #66b6fc 0%, #b2e1ff 43%, #ffffff 100%) no-repeat; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66b6fc), color-stop(43%,#b2e1ff), color-stop(100%,#ffffff)) no-repeat; 
+	background: -webkit-linear-gradient(top, #66b6fc 0%,#b2e1ff 43%,#ffffff 100%) no-repeat; 
+	background: -o-linear-gradient(top, #66b6fc 0%,#b2e1ff 43%,#ffffff 100%) no-repeat; 
+	background: -ms-linear-gradient(top, #66b6fc 0%,#b2e1ff 43%,#ffffff 100%) no-repeat; 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66b6fc', endColorstr='#FFFFFF',GradientType=0 );
+	background: linear-gradient(top, #66b6fc 0%,#b2e1ff 43%,#ffffff 100%) no-repeat; */
+}
+
+.wrapper{
+	width: 800px;
+	margin: 0pt auto;
+}
+
+.img_div{
+	float:left;
+}
+
+.links_div{
+	height: 250px;
+	margin-left: 251px;
+	overflow: auto;
+	padding: 0 20px 0 40px;
+	width: 487px;
+}
+.links_div p{
+	
+}
+
+.qr{
+	box-shadow: 5px 0px 9px rgba(40, 40, 40, 0.4);
+	width: 250px;
+	height: 250px;
+	background: url(/img/spinner-rectangle.gif) no-repeat center;
+	}
+	
+.qr2{
+	box-shadow: 3px 3px 4px rgba(40, 40, 40, 0.4);
+}
+.result{
+	width: 100%;
+	margin: 20px 0 0;
+	position: relative;
+	z-index:10;
+	box-shadow: 5px 5px 9px rgba(40, 40, 40, 0.4);
+}
+
+.qrresult{
+
+}
+
+label{
+	border: 1px solid black;
+	display: inline-block;
+	font-weight: bold;
+	height: 21px;
+	padding-bottom: 2px;
+	text-align: center;
+	width: 50px;
+	background-color:#C0C0C0;
+}
+
+a{
+	text-decoration: none;
+	border: none;
+}
+img {
+    border: none;
+}
+
+
+.helpcontainer{
+	position:relative;
+	z-index:1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: -5px auto 0px;
+	padding: 25px 20px 25px 10px;
+	height: 400px;
+	width: 94%;
+	box-shadow: 5px 5px 9px rgba(40, 40, 40, 0.4);
+	background: #F5F5F5;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #fafafa 77%, #ffffff 100%) no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(77%,#fafafa), color-stop(100%,#ffffff)) no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f5f5f5 0%,#fafafa 77%,#ffffff 100%) no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f5f5f5 0%,#fafafa 77%,#ffffff 100%) no-repeat; /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #f5f5f5 0%,#fafafa 77%,#ffffff 100%) no-repeat; /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F5F5F5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #f5f5f5 0%,#fafafa 77%,#ffffff 100%) no-repeat; /* W3C */
+}
+	.helpsection{
+		margin: 10px 0 30px;
+	}
+		.helpsection h2{
+			font-size: 14pt;
+			margin: 0 0 20px;
+			padding: 0;
+		}
+		.helpsection h3{
+			font-size: 12pt;
+			margin: 0 0 10px;
+			padding: 0;
+		}
+		.helpsection h4{
+			font-size: 10pt;
+			margin: 0 0 5px;
+			padding: 0;
+		}
+		.helpsection p{
+			margin: 5px 0;
+		}
+		.helpsection table{
+			font-size: 10pt;
+		}
+		.helpsection pre{
+			font-family: monospace;
+			width: 640px;
+			margin: 20px 0;
+			padding: 0 50px;
+			white-space: pre;
+			white-space: pre-wrap;
+			color:#2F4F4F;
+			font-size: 9pt;
+			overflow: hidden;
+		}
+		.innerhelpsection{
+			margin: 5px 0 20px 35px;
+		}
+		.helpattention{
+			color: #FF0000;
+			font-size: 9pt;
+			margin-bottom: 25px !important;
+			text-align: center;
+		}
+		.bookmarklet{
+			margin: 30px 0  !important;
+			text-align: center;
+		}
+			.bookmarklet a{
+				display:inline-block;
+				background-color:#B4E391;
+				border: 2px solid #61C419;
+				border-radius: 10px 10px 10px 10px;
+				padding: 10px;
+				font-weight: bold;
+				color:#000;
+				box-shadow: 2px 2px 3px rgba(40, 40, 40, 0.5);
+				background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391));
+				background: -webkit-linear-gradient(top, #b4e391 0%,#61c419 50%,#b4e391 100%);
+				background: -o-linear-gradient(top, #b4e391 0%,#61c419 50%,#b4e391 100%);
+				background: -ms-linear-gradient(top, #b4e391 0%,#61c419 50%,#b4e391 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 );
+				background: linear-gradient(top, #b4e391 0%,#61c419 50%,#b4e391 100%);
+			}
+			@-webkit-keyframes pulse {
+				from {
+					-webkit-transform: scale(1);
+				}
+				50% {
+					-webkit-transform: scale(1.2);
+				}
+				to { 
+					-webkit-transform: scale(1);
+				}
+			}
+			@-moz-keyframes pulse {
+				from {
+					-mos-transform: scale(1);
+				}
+				50% {
+					-moz-transform: scale(1.2);
+				}
+				to { 
+					-moz-transform: scale(1);
+				}
+			}
+			.bookmarklet a:hover{
+				-webkit-animation-name: pulse; 
+				-webkit-animation-duration: 1s; 
+				-webkit-animation-iteration-count: infinite;
+				-moz-animation-name: pulse; 
+				-moz-animation-duration: 1s; 
+				-moz-animation-iteration-count: infinite;
+			}
+			.bookmarklet span{
+				display: inline-block;
+				font-size: 8pt;
+				margin: 15px 0 0 !important;
+			}
+		.helpexample{
+			text-align: center;
+			margin: 20px 0 !important;
+		}
+		
+		#hidden{
+			display:none;
+		}
+
+#qrForm .ui-button{
+	position: absolute !important;
+	top: 0 !important;
+	z-index: 2 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+}
+#qrType{
+	left: 0;
+	width: 100px;
+}
+#qrTypeSelect{
+	left: 99px;
+	width: 35px;
+}
+
+#qrSubmit{
+	right: 34px;
+	width: 85px;
+}
+#showHelp{
+	right: 0px;
+	width: 35px;
+}
+
+#qrForm{
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+
+#dbug{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	max-height: 300px;
+	overflow: auto;
+	width: 300px;
+}
+
+.textinput{
+	width: 100%;
+	height: 100%;
+	padding: 2px 105px 2px 145px;
+	font-size: 1.1em !important;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 5px 5px 9px rgba(40, 40, 40, 0.4);
+}
+
+#qrTypeSelectList{
+	width: 100px;
+	position:absolute;
+	box-shadow: 5px 5px 9px rgba(40, 40, 40, 0.4);
+	z-index:100;
+	font-size: 0.8em !important;
+}
+
+.spinner{
+	text-align: center;
+	margin: 40px auto;
+	background: url(/img/spinner.gif) no-repeat center;
+	height:50px;
+	width:100%;
+}
+
+.errorBox{
+	text-align: center;
+	margin: 40px auto 0;
+	width:50%;
+}

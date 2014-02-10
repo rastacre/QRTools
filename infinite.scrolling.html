@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>GPT Training - Infinite Scroll Example</title>
+    <script type='text/javascript'>
+      //Counter to provide unique ID's for dynamically created GPT slots, slot id 1 is created initially and subsequent slots are value 2+n
+      var  idcounter = 2;
+      //Begin GPT
+      //Slot array for GPT ad slots
+      var gptadslots=[];
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      //SSL
+      (function(){ var gads = document.createElement('script');
+            gads.async = true; gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+      //GPT Slot declaration
+      googletag.cmd.push(function() {
+        //Initial ad on page definition
+        gptadslots[1]= googletag.defineSlot('/6075/gpttraining', [[728,90]],'leaderboard').addService(googletag.pubads());
+		googletag.pubads().disableInitialLoad();
+
+        googletag.pubads().enableAsyncRendering();
+            googletag.enableServices();     
+        });
+    
+      //Function to add content to page, mimics real infinite scroll but keeps it much more simple from a code perspective
+      function moreContent() { 
+        //Grab body
+        var htmlBody = document.getElementsByTagName('body') [0];
+        
+        //Create and add 728x90 ad slot
+        var slotname="adslot" + idcounter;
+        gptadslots[idcounter]= googletag.defineSlot('/6075/gpttraining', [[728,90]], slotname).addService(googletag.pubads());
+        var advertisement = document.createElement('div'); //create div to house the ad
+        advertisement.id= slotname; //name the div after the slot name
+        htmlBody.appendChild(advertisement); //add the div to the HTML body
+        googletag.cmd.push(function() { googletag.display(slotname); }); //display the ad (will not actualy display until we call refresh later)
+        var br = document.createElement('br'); //create line break
+        htmlBody.appendChild(br); //add line break after the ad
+        
+        //Create and add fake content 1
+        var div1 = document.createElement('div');   
+        var img1 = document.createElement('img');
+        var br1 = document.createElement('br');
+        img1.src = "http://placehold.it/350x250&text=Fake+Content";    
+        div1.appendChild(img1);
+        htmlBody.appendChild(div1);
+        htmlBody.appendChild(br1);
+    
+        //Create and add fake content 2
+        var div2 = document.createElement('div'); //create div
+        var img2 = document.createElement('img'); //create image
+        var br2 = document.createElement('br'); //create line break
+        img2.src = "http://placehold.it/350x250&text=Fake+Content"; //set image as placeholder graphic
+        div2.appendChild(img2); //add the image to the div
+        htmlBody.appendChild(div2); //add the div to the body
+        htmlBody.appendChild(br2); //add the line break after the div
+        
+        //Render new ad
+        googletag.pubads().refresh([gptadslots[idcounter]]);
+        
+        //Increase unique ID counter (for ad slot naming)
+        idcounter = idcounter + 1;
+      }
+    </script>
+  </head>
+  <body onload="googletag.pubads().refresh([gptadslots[1]])">    
+    <h1>GPT Test Page - Infinite Scroll</h1>
+    <!-- First Fake Content -->
+    <img src="http://placehold.it/350x250&text=Fake+Content+1" /><br /><br />
+    
+    <!-- First Ad -->
+    <div id='leaderboard'>
+   	  <script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('leaderboard'); });
+	  </script>
+    </div>
+    <br />
+    
+    <!-- Second and Third Fake Content -->
+    <img src="http://placehold.it/350x250&text=Fake+Content+2" /><br /><br />
+    <img src="http://placehold.it/350x250&text=Fake+Content+3" /><br /><br />
+    
+    <!-- Scroll Event -->
+    <button type="button" onclick="moreContent()" style="float:left;position:fixed;bottom:10px;left:10px;">More Content</button>
+  </body>
+  <footer>
+  </footer>
+</html>
+
